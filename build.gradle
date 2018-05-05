@@ -1,0 +1,53 @@
+buildscript {
+	ext {
+		springBootVersion = '2.0.1.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'org.lemon.yhj'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter')
+
+	//tools jar
+	compile('org.jsoup:jsoup:1.11.2')
+	compile('com.google.guava:guava:18.0')
+	compile("joda-time:joda-time:2.9.3")
+	compile("com.tinify:tinify:1.5.1")
+	compile("org.apache.httpcomponents:httpclient:4.5.3")
+	compile('org.apache.httpcomponents:httpasyncclient:4.1')
+	compile('commons-lang:commons-lang:2.6')
+	compile('com.alibaba:fastjson:1.2.39')
+	compile('commons-collections:commons-collections:20040616')
+	compile('cglib:cglib-nodep:2.2.2')
+	compile('org.jsoup:jsoup:1.10.3')
+	compile('com.hynnet:DJNativeSwing:1.0.0')//提供网页截图服务
+	compile('com.hynnet:DJNativeSwing-SWT:1.0.0')//提供网页截图服务
+	compile('org.eclipse.swt:org.eclipse.swt.win32.win32.x86_64:4.3')//提供网页截图服务
+	compile('com.github.xuwei-k:html2image:0.1.0')//html2image jar
+	compile('org.seleniumhq.selenium:selenium-java:3.1.0'){
+		exclude group: 'org.slf4j'
+		exclude group: 'ch.qos.logback'
+		exclude group: 'log4j:log4j'
+	}//selenium框架，不过webdriver更好
+
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
