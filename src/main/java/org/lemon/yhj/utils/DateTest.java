@@ -1,19 +1,18 @@
 /**
  * Project Name:lemontree<br>
  * File Name:DateTest.java<br>
- * Package Name:org.lemon.yhj.toys<br>
+ * Package Name:org.lemon.yhj.date<br>
  * Date:2017年5月18日下午4:01:13<br>
  * Copyright (c) 2017, duiba.com.cn All Rights Reserved.<br>
  */
 
-package org.lemon.yhj.toys;
+package org.lemon.yhj.utils;
 
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import org.joda.time.DateTime;
 
 /**
  * ClassName: DateTest <br/>
