@@ -26,6 +26,7 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
+	compile('org.springframework.boot:spring-boot-starter-web')
 
 	//tools jar
 	compile('org.jsoup:jsoup:1.11.2')
