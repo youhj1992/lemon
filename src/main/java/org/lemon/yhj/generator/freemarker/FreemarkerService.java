@@ -25,7 +25,7 @@ public class FreemarkerService {
 
     public FreemarkerService() {
         cfg.setDefaultEncoding(encoding);
-        cfg.setClassForTemplateLoading(FreemarkerService.class, "");
+        cfg.setClassForTemplateLoading(FreemarkerService.class, "/templates/freemarker/");
         cfg.setObjectWrapper(new DefaultObjectWrapper());
         cfg.setNumberFormat("#");
         this.location = "";

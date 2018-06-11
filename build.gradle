@@ -39,7 +39,7 @@ dependencies {
 	compile('org.apache.httpcomponents:httpasyncclient:4.1')
 	compile('commons-dbutils:commons-dbutils:1.7')
 	compile('commons-io:commons-io:2.4')
-	compile('org.freemarker:freemarker:2.3.19')
+	compile('org.freemarker:freemarker:2.3.27-incubating')
 	compile('commons-lang:commons-lang:2.6')
 	compile('com.alibaba:fastjson:1.2.39')
 	compile('commons-collections:commons-collections:20040616')

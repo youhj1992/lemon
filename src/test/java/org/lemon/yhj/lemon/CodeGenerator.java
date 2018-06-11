@@ -11,23 +11,23 @@ public class CodeGenerator {
 
     public static void main(String[] args) {
         //数据库的连接信息、用户名、密码
-        String DB_URL = "jdbc:mysql://47.97.189.222:3309/guide?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&connectTimeout=5000&socketTimeout=60000";
-        String user = "guide";
-        String pwd = "bxm.iueM^EY!8F";
+        String DB_URL = "jdbc:mysql://47.96.253.233:3306/guide?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true";
+        String user = "root";
+        String pwd = "bxm.2018";
 
         GeneratorConfig config = new GeneratorConfig(DB_URL, user, pwd);
         //设置生成的 XXXXMapper.java所在的包名
-        config.setDaoPackage("com.bxm.adsprod.dal.activity.land");
+        config.setDaoPackage("org.lemon.yhj.generator.test");
         //设置生成的 XXXXDO.java所在的包名
-        config.setDOpackage("com.bxm.adsprod.dal.activity.land");
+        config.setDOpackage("org.lemon.yhj.generator.test");
         //设置生成的XXX.java存放的模块名
-        config.setModuleName("lemon");
+        config.setModuleName("");
         //设置生成的XXXXMapper.xml存在的相对路径，相对工程根目录，
-        config.setXmlLocation("lemon/src/main/resources/mybatis/activity");
+        config.setXmlLocation("src/main/resources");
         //设置数据库名，库名填错会找不到表
         config.setTableCatalog("guide");
         //设置表名，生成器根据设置的表生成代码
-        config.setTableName("tbl_land_user_info");
+        config.setTableName("tbl_ad_ticket_ip");
         //设置数据表前缀，比如tb_activity的前缀为tb，设置了此项之后生成的do、dao、mapper.xml不包含前缀tb
         config.setTablePrefix("tbl");
 
