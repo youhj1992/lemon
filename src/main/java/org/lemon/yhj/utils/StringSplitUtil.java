@@ -8,7 +8,7 @@
  */
 package org.lemon.yhj.utils;
 
-import java.util.List;
+import org.apache.commons.lang3.StringUtils;
 
 
 
@@ -23,8 +23,27 @@ import java.util.List;
  */
 public class StringSplitUtil {
 
-//    public static List<String> splitStrToStrList(String str, String symbol)
-//    {
-////        if (StringUtils)
-//    }
+    public static String fetchBase64Result(String base64Result) {
+        if (StringUtils.isBlank(base64Result)) {
+            return StringUtils.EMPTY;
+        }
+        return base64Result.replaceAll("=", "");
+    }
+
+    public static String reduceBase64Result(String base64Result) {
+        if (StringUtils.isBlank(base64Result)) {
+            return StringUtils.EMPTY;
+        }
+        int mod = Math.floorMod(base64Result.length(), 4);
+        StringBuilder sb = new StringBuilder(base64Result);
+        for (int i = 0; i < 4 - mod; i++) {
+            sb.append("=");
+        }
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(StringSplitUtil.fetchBase64Result("MTAwMDAwMA=="));
+        System.out.println(StringSplitUtil.reduceBase64Result("MTAwMDAwMA"));
+    }
 }
