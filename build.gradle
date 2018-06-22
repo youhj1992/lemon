@@ -45,6 +45,7 @@ dependencies {
 	compile('commons-collections:commons-collections:20040616')
 	compile('cglib:cglib-nodep:2.2.2')
 	compile('org.jsoup:jsoup:1.10.3')
+	compile('net.coobird:thumbnailator:0.4.8')//google图片处理工具类
 	compile('com.hynnet:DJNativeSwing:1.0.0')//提供网页截图服务
 	compile('com.hynnet:DJNativeSwing-SWT:1.0.0')//提供网页截图服务
 	compile('org.eclipse.swt:org.eclipse.swt.win32.win32.x86_64:4.3')//提供网页截图服务
