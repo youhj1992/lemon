@@ -1,5 +1,6 @@
 package org.lemon.yhj.controller;
 
+import org.lemon.yhj.annotation.log.Log;
 import org.lemon.yhj.cipher.Base64;
 import org.lemon.yhj.cipher.MD5;
 import org.springframework.stereotype.Controller;
@@ -12,6 +13,7 @@ public class TestController {
 
     @ResponseBody
     @RequestMapping("password")
+    @Log
     public String getPassword(String str){
         try {
             return MD5.md5(str);

@@ -3,6 +3,7 @@ package org.lemon.yhj.image;
 import net.coobird.thumbnailator.Thumbnailator;
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.geometry.Positions;
+import org.lemon.yhj.annotation.log.Log;
 
 import javax.imageio.ImageIO;
 import java.io.File;
@@ -46,6 +47,7 @@ public class PhotoConvertUtil {
      * @param dest
      * @param destSize
      */
+    @Log
     public static void convertKeepAspectRatio(String source, String dest, Size destSize){
         try {
             File sourceFile = new File(source);

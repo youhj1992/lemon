@@ -27,6 +27,7 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-aop')
 
 	//tools jar
 	compile('org.mybatis:mybatis:3.3.1')
