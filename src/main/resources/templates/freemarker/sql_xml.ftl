@@ -33,7 +33,7 @@
         UPDATE ${table.tableSchema}.${table.tableName}
         <set>
         <#list columns as c>
-            <#if c.extra != 'auto_increment' && c.extra != "on update CURRENT_TIMESTAMP" && c.columnName != "gmt_create">
+            <#if c.extra != 'auto_increment' && c.extra != "on update CURRENT_TIMESTAMP" && c.columnName != "gmt_create" && c.columnName != "create_time">
             <if test="${c.attrname} != null">
                 ${c.columnName} = ${pre}${c.attrname}${end},
             </if>

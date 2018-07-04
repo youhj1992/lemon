@@ -27,7 +27,7 @@ public class CodeGenerator {
         //设置数据库名，库名填错会找不到表
         config.setTableCatalog("guide");
         //设置表名，生成器根据设置的表生成代码
-        config.setTableName("tbl_ad_ticket_ip");
+        config.setTableName("tbl_activity_position_relation");
         //设置数据表前缀，比如tb_activity的前缀为tb，设置了此项之后生成的do、dao、mapper.xml不包含前缀tb
         config.setTablePrefix("tbl");
 

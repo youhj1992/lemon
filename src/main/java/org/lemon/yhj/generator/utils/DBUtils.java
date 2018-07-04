@@ -79,7 +79,8 @@ public class DBUtils {
         for (ColumnEntity columnEntity : columnList){
             if ( !"auto_increment".equalsIgnoreCase(columnEntity.getExtra())
                     && !"on update CURRENT_TIMESTAMP".equalsIgnoreCase(columnEntity.getExtra())
-                    && !"gmt_create".equalsIgnoreCase(columnEntity.getColumnName())){
+                    && !"gmt_create".equalsIgnoreCase(columnEntity.getColumnName())
+                    && !"create_time".equalsIgnoreCase(columnEntity.getColumnName())){
                 list.add(columnEntity);
             }
         }
